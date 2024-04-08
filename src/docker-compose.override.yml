@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+   doctordb:
+    container_name: doctordb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=doctordb
+    restart: always
+    ports:
+      - "5432:5432"      
+    volumes:
+     - postgres_doctor:/var/lib/postgresql/data
